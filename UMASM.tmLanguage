@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>ums</string>
+	</array>
+	<key>name</key>
+	<string>UMASM</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>common mistakes</string>
+			<key>match</key>
+			<string>\s=\s|r[0-7]\s*?=[^=]|\\n\"</string>
+			<key>name</key>
+			<string>invalid.illegal.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>registers</string>
+			<key>match</key>
+			<string>r[0-7]</string>
+			<key>name</key>
+			<string>constant.language.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>operators</string>
+			<key>match</key>
+			<string>\s*(:=|==|!=|&lt;s|&gt;s|&lt;=s|&gt;=s|\+|\-|\*|\/|nand|&amp;|\||xor|mod|\~)[^(\/\/)]\s*</string>
+			<key>name</key>
+			<string>keyword.operator.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>parens</string>
+			<key>match</key>
+			<string>(\(|\))</string>
+			<key>name</key>
+			<string>entity.name.tag.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>memory</string>
+			<key>match</key>
+			<string>m\[r[0-7]\]\[.*\]</string>
+			<key>name</key>
+			<string>support.constant.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>keywords</string>
+			<key>match</key>
+			<string>\b(if|m|goto|map|segment|nand|xor|string|unmap|input|output|in|program|using|off|here|halt|words|push|pop|on|off|stack)\b</string>
+			<key>name</key>
+			<string>keyword.control.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>directives 1</string>
+			<key>match</key>
+			<string>\.section</string>
+			<key>name</key>
+			<string>support.function.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>directives 2</string>
+			<key>match</key>
+			<string>\.temps|\.data|\.space|\.zero</string>
+			<key>name</key>
+			<string>support.type.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>label</string>
+			<key>match</key>
+			<string>.*?:\n</string>
+			<key>name</key>
+			<string>entity.name.function.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>literals</string>
+			<key>match</key>
+			<string>\s+(0x[a-fA-F0-9]+|\'\\?.\'|\d+|\".+\")</string>
+			<key>name</key>
+			<string>support.function.ums</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>line comments</string>
+			<key>match</key>
+			<string>\/\/.*$</string>
+			<key>name</key>
+			<string>comment.line.ums</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.ums</string>
+	<key>uuid</key>
+	<string>65ef6d90-413b-4b8b-8e97-7ac9a7d19932</string>
+</dict>
+</plist>

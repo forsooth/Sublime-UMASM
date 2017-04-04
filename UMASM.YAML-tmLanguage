@@ -1,0 +1,50 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+name: UMASM
+scopeName: source.ums
+fileTypes: [ums]
+uuid: 65ef6d90-413b-4b8b-8e97-7ac9a7d19932
+
+patterns:
+- comment: common mistakes
+  name: invalid.illegal.ums
+  match: \s=\s|r[0-7]\s*?=[^=]|\\n\"
+
+- comment: registers
+  name: constant.language.ums
+  match: r[0-7]
+
+- comment: operators
+  name: keyword.operator.ums
+  match: \s*(:=|==|!=|<s|>s|<=s|>=s|\+|\-|\*|\/|nand|&|\||xor|mod|\~)[^(\/\/)]\s*
+
+- comment: parens
+  name: entity.name.tag.ums
+  match: (\(|\))
+
+- comment: memory
+  name: support.constant.ums
+  match: m\[r[0-7]\]\[.*\]
+
+- comment: keywords
+  name: keyword.control.ums
+  match: \b(if|m|goto|map|segment|nand|xor|string|unmap|input|output|in|program|using|off|here|halt|words|push|pop|on|off|stack)\b
+
+- comment: directives 1
+  name: support.function.ums
+  match: \.section
+
+- comment: directives 2
+  name: support.type.ums
+  match: \.temps|\.data|\.space|\.zero
+
+- comment: label
+  name: entity.name.function.ums
+  match: .*?:\n
+
+- comment: literals
+  name: support.function.ums
+  match: \s+(0x[a-fA-F0-9]+|\'\\?.\'|\d+|\".+\")
+
+- comment: line comments
+  name: comment.line.ums
+  match: \/\/.*$
