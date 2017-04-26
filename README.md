@@ -5,7 +5,7 @@ Syntax highlighting for Sublime Text for the UMASM (Universal Machine Assembly L
 # Installation
 In a Sublime installation, there exists a `Packages` folder (for example, with the default installation on a modern GNU/Linux system, at `~/.config/sublime-text-3/`). Within this, there should be a directory called `User`; if there is not, then create it. Copy the `UMASM.tmLanguage` file into this directory, and restart sublime; in the `View > Syntax` menu, there should now be an entry called `UMASM`.
 
-# Development & Contributing
+# Development & Contribution
 This syntax highlighting is not guaranteed to be perfect, as it was originally written in an hour or so while doing this project when I took COMP-40. If you find any issues, please open a GitHub issue and we can address it.
 
 The structure of a Sublime Text syntax highlighting configuration is that there exists a `*.YAML-tmLanguage` file. This is human-readable, and contains a list of patterns in the YAML file format. Each pattern contains:
